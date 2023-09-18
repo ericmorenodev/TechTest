@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 internal final class HomePresenter: HomePresenterProtocol {
     // MARK: Variables
@@ -58,6 +59,25 @@ internal final class HomePresenter: HomePresenterProtocol {
                                          message: ConstantsAPI.errorMessageNoCache)
                 }
             }
+        }
+    }
+
+    func downloadCharacterImageHome(_ rmCharacterAtIndex: PeopleAPIProtocol, _ cell: HomeCustomCellView) {
+        if let imageUrlString = rmCharacterAtIndex.image, let imageUrl = URL(string: imageUrlString) {
+            let task = URLSession.shared.dataTask(with: imageUrl) { data, _, error in
+                if error == nil, let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        cell.peopleImage.image = image
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        cell.peopleImage.image = UIImage(systemName: "person.circle")?.withTintColor(.gray)
+                    }
+                    print("Error Downloading Image: \(error?.localizedDescription ?? "")")
+                    self.view?.loadingView(.hide)
+                }
+            }
+            task.resume()
         }
     }
 

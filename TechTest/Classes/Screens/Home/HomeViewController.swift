@@ -63,22 +63,7 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
 
         cell.lblName.text = rmCharacterAtIndex.name
 
-        if let imageUrlString = rmCharacterAtIndex.image, let imageUrl = URL(string: imageUrlString) {
-            let task = URLSession.shared.dataTask(with: imageUrl) { data, _, error in
-                if error == nil, let data = data, let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        cell.peopleImage.image = image
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        cell.peopleImage.image = UIImage(systemName: "person.circle")?.withTintColor(.gray)
-                    }
-                    print("Error Downloading Image: \(error?.localizedDescription ?? "")")
-                    self.hideLoading()
-                }
-            }
-            task.resume()
-        }
+        presenter?.downloadCharacterImageHome(rmCharacterAtIndex, cell)
 
         return cell
     }

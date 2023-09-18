@@ -25,6 +25,7 @@ protocol HomePresenterProtocol {
     func getPeopleCount() -> Int
     func rmCharacterAtIndex(index: Int) -> PeopleAPIProtocol
     func checkNextCallIsNeeded() -> Bool
+    func downloadCharacterImageHome(_ rmCharacterAtIndex: PeopleAPIProtocol, _ cell: HomeCustomCellView)
 }
 
 protocol HomeInteractorProtocol {
