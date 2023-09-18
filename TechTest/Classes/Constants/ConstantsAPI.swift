@@ -27,21 +27,7 @@ struct ConstantsAPI {
     static let imageCharacter = UIImage(systemName: "character")
     static let imageEpisodes = UIImage(systemName: "book")
 
-    struct LocationUI: RMLocationAPIProtocol {
-        var locationId: Int
-        var name: String
-        var residents: [String]
-        var dimensions: String
-        var type: String
-        var locationURL: String
-        var created: String
-    }
+    // MARK: Strings
 
-    static let locationUIPlaceholder = LocationUI(locationId: 1,
-                                                  name: "Placeholder",
-                                                  residents: ["Placeholder"],
-                                                  dimensions: "Placeholder",
-                                                  type: "Placeholder",
-                                                  locationURL: "Placeholder",
-                                                  created: "Placeholder")
+    static let errorTitleCheckConnection = "Something is wrong, check your connection."
 }

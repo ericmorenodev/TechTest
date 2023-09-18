@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public class PeopleServiceApi: PeopleServiceAPIProtocol {
+public class PeopleServiceAPI: PeopleServiceAPIProtocol {
     private var nextPageCharacters: String?
 
     func getPeopleResult(completion: @escaping (Result<[PeopleAPIProtocol], Error>) -> Void) {

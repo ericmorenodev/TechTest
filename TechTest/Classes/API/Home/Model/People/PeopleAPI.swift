@@ -8,8 +8,8 @@
 import Foundation
 
 struct PeopleAPI: PeopleAPIProtocol, Codable {
-    private let castOrigin: RMOriginAPI
-    private let castLocation: RMLocationOfCharacterAPI
+    private let castOrigin: OriginAPI
+    private let castLocation: LocationOfCharacterAPI
 
     var characterId: Int
     var name: String
@@ -47,8 +47,8 @@ struct PeopleAPI: PeopleAPIProtocol, Codable {
         species = try container.decode(String.self, forKey: .species)
         type = try container.decode(String.self, forKey: .type)
         gender = try container.decode(Gender.self, forKey: .gender)
-        castOrigin = try container.decode(RMOriginAPI.self, forKey: .origin)
-        castLocation = try container.decode(RMLocationOfCharacterAPI.self, forKey: .location)
+        castOrigin = try container.decode(OriginAPI.self, forKey: .origin)
+        castLocation = try container.decode(LocationOfCharacterAPI.self, forKey: .location)
         image = try container.decode(String.self, forKey: .image)
         episodes = try container.decode([URL].self, forKey: .episode)
         characterURL = try container.decode(URL.self, forKey: .characterURL)
