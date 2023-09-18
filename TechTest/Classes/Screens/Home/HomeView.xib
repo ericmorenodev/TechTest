@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ZaraRickMorty" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndicator" destination="OUg-Mv-Klz" id="gaD-kh-f5K"/>
+                <outlet property="searchBar" destination="DCp-Fi-kPg" id="ru2-cK-mlS"/>
+                <outlet property="tableViewPeople" destination="tN3-ac-6mk" id="eMK-M6-Hy4"/>
+                <outlet property="view" destination="Uh2-Zq-dxk" id="UGM-qs-fmm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Uh2-Zq-dxk">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="tN3-ac-6mk">
+                    <rect key="frame" x="16" y="150" width="361" height="661"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="OUg-Mv-Klz">
+                    <rect key="frame" x="16" y="150" width="361" height="661"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                </activityIndicatorView>
+                <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-Fi-kPg">
+                    <rect key="frame" x="16" y="94" width="361" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="jFP-d2-rdD"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="MUi-c7-bTR"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tN3-ac-6mk" firstAttribute="top" secondItem="DCp-Fi-kPg" secondAttribute="bottom" id="0Go-Qw-u6Z"/>
+                <constraint firstItem="DCp-Fi-kPg" firstAttribute="trailing" secondItem="tN3-ac-6mk" secondAttribute="trailing" id="8gd-SV-WEa"/>
+                <constraint firstItem="DCp-Fi-kPg" firstAttribute="leading" secondItem="tN3-ac-6mk" secondAttribute="leading" id="eZt-Bc-Lpv"/>
+            </constraints>
+            <point key="canvasLocation" x="58.778625954198468" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
