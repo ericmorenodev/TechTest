@@ -13,9 +13,6 @@ protocol StorageManagerProtocol {
 
     func getPeople() -> [PeopleAPIProtocol]?
     func savePeople(people: [PeopleAPIProtocol])
-
-//    func getEpisodes(name: String) -> [EpisodesAPIProtocol]?
-//    func saveEpisodes(film: [EpisodesAPIProtocol], name: String)
 }
 
 struct StorageManager: StorageManagerProtocol {
@@ -63,25 +60,6 @@ struct StorageManager: StorageManagerProtocol {
 
         try? saveObject(object: peopleObj, filename: "peopleCache.json")
     }
-
-//    func getEpisode(name: String) -> [EpisodeAPIProtocol]? {
-//        do {
-//            let episode: [EpisodeAPI] = try getObject(filename: "\(name)Cache.json")
-//            return episode
-//        } catch let err {
-//            print(err.localizedDescription)
-//        }
-//
-//        return nil
-//    }
-//
-//    func saveEpisodes(film: [EpisodeAPIProtocol], name: String) {
-//        guard let episodeObj = episode as? [EpisodeAPI] else {
-//            return
-//        }
-//
-//        try? saveObject(object: episodeObj, filename: "\(name)Cache.json")
-//    }
 
     // MARK: Path Function
 

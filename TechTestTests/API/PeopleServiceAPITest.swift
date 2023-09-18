@@ -33,7 +33,6 @@ final class PeopleServiceApiTests: XCTestCase {
     }
 
     func testSutNotNil() {
-        // comprueba que se ha creado bien la clase
         XCTAssertNotNil(sut)
     }
 

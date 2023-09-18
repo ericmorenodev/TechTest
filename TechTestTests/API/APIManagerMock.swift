@@ -20,10 +20,6 @@ class APIManagerMock: APIManagerProtocol {
         if showError {
             showErrorCalled = true
             completion(.failure(TestConstants.errorTest))
-
-//        } else {
-//            showErrorNotCalled = true
-//            completion(.success(TestConstants.testResponsePeople as! T))
         }
     }
 }

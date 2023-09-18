@@ -40,16 +40,12 @@ final class HomeViewControllerTests: XCTestCase {
     }
 
     func testSutNotNil() {
-        // comprueba que se ha creado bien la clase
         XCTAssertNotNil(sut)
-        // se ha asignado bien el presenter
         XCTAssertNotNil(sut.presenter)
     }
 
     func testInitController() {
         _ = sut.view
-        // estos test van viendo que las cosas pasan
-
         XCTAssertTrue(presenterMock.funcViewDidLoadWasCalledCalled)
         XCTAssertFalse(presenterMock.funcViewAppearWasCalledCalled)
     }
