@@ -49,7 +49,7 @@ struct StorageManager: StorageManagerProtocol {
         do {
             let people: [PeopleAPI] = try getObject(filename: "peopleCache.json")
             return people
-        } catch let err {
+        } catch let err { // esto visual si quieres
             print(err.localizedDescription)
         }
 

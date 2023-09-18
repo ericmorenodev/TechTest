@@ -7,5 +7,5 @@
 
 import Foundation
 protocol PeopleServiceAPIProtocol {
-    func getPeopleResult(completion: @escaping (Result<[PeopleAPIProtocol], Error>) -> Void)
+    func getPeopleResult(firstURL: String, completion: @escaping (Result<PeopleResponseAPIProtocol, Error>) -> Void)
 }

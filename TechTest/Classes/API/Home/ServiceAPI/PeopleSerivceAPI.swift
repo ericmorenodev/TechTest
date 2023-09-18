@@ -7,38 +7,21 @@
 
 import Foundation
 public class PeopleServiceAPI: PeopleServiceAPIProtocol {
-    private var nextPageCharacters: String?
+    var apiManager: APIManagerProtocol
 
-    func getPeopleResult(completion: @escaping (Result<[PeopleAPIProtocol], Error>) -> Void) {
-        let firstUrl = ConstantsAPI.apiCharacter
+    init(apiManager: APIManagerProtocol = ApiManager.shared) {
+        self.apiManager = apiManager
+    }
 
-        var nextUrlToCall = firstUrl
+    func getPeopleResult(firstURL: String, completion: @escaping (Result<PeopleResponseAPIProtocol, Error>) -> Void) {
+        apiManager.apiCall(for: firstURL) { (result: Result<PeopleResponseAPI, Error>) in
+            switch result {
+            case let .success(people):
+                completion(.success(people))
 
-        if let nextPageUrl = nextPageCharacters {
-            nextUrlToCall = nextPageUrl
-        }
-
-        guard let url = URL(string: nextUrlToCall) else {
-            return
-        }
-
-        let urlSession = URLSession.shared
-        urlSession.dataTask(with: url) { data, _, error in
-            if let error {
+            case let .failure(error):
                 completion(.failure(error))
-                return
             }
-
-            if let data {
-                do {
-                    let apiResults = try JSONDecoder().decode(PeopleResponseAPI.self,
-                                                              from: data)
-                    self.nextPageCharacters = apiResults.info.next
-                    completion(.success(apiResults.results))
-                } catch let decodeError {
-                    completion(.failure(decodeError))
-                }
-            }
-        }.resume()
+        }
     }
 }

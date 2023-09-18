@@ -15,30 +15,48 @@ internal final class HomePresenter: HomePresenterProtocol {
     var rmCharacter = [PeopleAPIProtocol]()
 
     var urlToChange = ConstantsAPI.apiCharacter
+    var next = true
+
+    var storageManager: StorageManager
 
     // MARK: inits
 
-    init(interactor: HomeInteractorProtocol) {
+    init(interactor: HomeInteractorProtocol, storageManager: StorageManager = StorageManager.shared) {
         self.interactor = interactor
+        self.storageManager = storageManager
     }
 
     func viewDidLoadWasCalled() {
         callCharacterAPI()
     }
 
-    internal func callCharacterAPI() {
+    func callCharacterAPI() {
         interactor.getPeopleResult(firstURL: urlToChange) { result in
-            self.view?.loadingView(.show)
-
             switch result {
-            case let .failure(error):
-                self.view?.loadingView(.hide)
-                self.view?.showError(title: ConstantsAPI.errorTitleCheckConnection, message: error.localizedDescription)
-
-            case let .success(rmCharacterSuccess):
+            case let .success(peopleRetrieved):
+                self.view?.loadingView(.show)
+                let peopleFromCall = peopleRetrieved.results
+                self.rmCharacter.append(contentsOf: peopleFromCall)
+                self.storageManager.savePeople(people: self.rmCharacter)
                 self.view?.loadPeople()
                 self.view?.loadingView(.hide)
-                self.rmCharacter.append(contentsOf: rmCharacterSuccess)
+                if let nextUrl = peopleRetrieved.info.next {
+                    self.urlToChange = nextUrl
+                } else {
+                    self.next = false
+                }
+
+            case let .failure(error):
+                if let apiResults = self.storageManager.getPeople() {
+                    self.next = false
+                    self.rmCharacter = apiResults
+                    self.view?.loadPeople()
+                    self.view?.showError(title: ConstantsAPI.errorTitleCheckConnection,
+                                         message: ConstantsAPI.errorTitleCheckConnection)
+                } else {
+                    self.view?.showError(title: ConstantsAPI.errorGeneralNoConnection,
+                                         message: ConstantsAPI.errorMessageNoCache)
+                }
             }
         }
     }
@@ -53,5 +71,9 @@ internal final class HomePresenter: HomePresenterProtocol {
 
     func rmCharacterAtIndex(index: Int) -> PeopleAPIProtocol {
         return rmCharacter[index]
+    }
+
+    func checkNextCallIsNeeded() -> Bool {
+        return next
     }
 }

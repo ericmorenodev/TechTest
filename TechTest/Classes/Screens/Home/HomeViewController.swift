@@ -46,6 +46,15 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
         return presenter?.getPeopleCount() ?? 0
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let numrowToMakeNewApiCall = presenter?.getPeopleCount() else { return }
+        if presenter?.checkNextCallIsNeeded() == true {
+            if indexPath.row == (numrowToMakeNewApiCall - 5) {
+                presenter?.callCharacterAPI()
+            }
+        }
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCustomCell", for: indexPath) as? HomeCustomCellView
         else { return HomeCustomCellView() }

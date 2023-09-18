@@ -24,10 +24,11 @@ protocol HomePresenterProtocol {
     func callCharacterAPI()
     func getPeopleCount() -> Int
     func rmCharacterAtIndex(index: Int) -> PeopleAPIProtocol
+    func checkNextCallIsNeeded() -> Bool
 }
 
 protocol HomeInteractorProtocol {
-    func getPeopleResult(firstURL: String, completion: @escaping (Result<[PeopleAPIProtocol], Error>) -> Void)
+    func getPeopleResult(firstURL: String, completion: @escaping (Result<PeopleResponseAPIProtocol, Error>) -> Void)
 }
 
 protocol HomeServiceProtocol {
