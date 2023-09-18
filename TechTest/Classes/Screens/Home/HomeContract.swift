@@ -20,6 +20,8 @@ enum LoadingState {
 
 protocol HomePresenterProtocol {
     var view: HomeViewProtocol? { get set }
+    var rmCharacter: [PeopleAPIProtocol] { get set }
+    func filterRMCharacter(with searchText: String)
     func viewDidLoadWasCalled()
     func callCharacterAPI()
     func getPeopleCount() -> Int

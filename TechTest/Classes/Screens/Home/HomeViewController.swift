@@ -8,11 +8,12 @@
 import Foundation
 import UIKit
 
-internal class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+internal class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     // MARK: Outlets
 
     @IBOutlet var tableViewPeople: UITableView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet var searchBar: UISearchBar!
 
     // MARK: Variables
 
@@ -33,6 +34,7 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
 
         tableViewPeople.dataSource = self
         tableViewPeople.delegate = self
+        searchBar.delegate = self
 
         tableViewPeople.register(UINib(nibName: "HomeCustomCell",
                                        bundle: nil),
@@ -77,7 +79,9 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
         delegate?.goToDetailScreen(people: rmCharacterAtIndex, sender: self)
     }
 
-    // MARK: Actions
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.filterRMCharacter(with: searchText)
+    }
 }
 
 extension HomeViewController: HomeViewProtocol {

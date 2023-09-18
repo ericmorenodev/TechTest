@@ -21,4 +21,3 @@ protocol DetailPresenterProtocol {
 protocol DetailInteractorProtocol {
     func getCharacter() -> PeopleAPIProtocol
 }
-

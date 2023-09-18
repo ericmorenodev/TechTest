@@ -249,7 +249,6 @@
 		739F501E2AB10E7300D0D3C6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				739F50202AB10EAE00D0D3C6 /* Detail */,
 				739F50212AB10ECB00D0D3C6 /* Home */,
 				739F501F2AB10E9F00D0D3C6 /* Managers */,
 			);
@@ -263,13 +262,6 @@
 				739F502B2AB1130600D0D3C6 /* StorageManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		739F50202AB10EAE00D0D3C6 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		739F50212AB10ECB00D0D3C6 /* Home */ = {

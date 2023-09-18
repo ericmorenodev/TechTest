@@ -15,6 +15,9 @@ internal final class HomePresenter: HomePresenterProtocol {
     var interactor: HomeInteractorProtocol
     var rmCharacter = [PeopleAPIProtocol]()
 
+    var filteredRMCharacter = [PeopleAPIProtocol]()
+    var isFiltering = false
+
     var urlToChange = ConstantsAPI.apiCharacter
     var next = true
 
@@ -89,16 +92,28 @@ internal final class HomePresenter: HomePresenterProtocol {
         }
     }
 
+    func filterRMCharacter(with searchText: String) {
+        isFiltering = !searchText.isEmpty
+
+        if isFiltering {
+            filteredRMCharacter = rmCharacter.filter { character in
+                character.name.lowercased().contains(searchText.lowercased())
+            }
+        }
+
+        view?.loadPeople()
+    }
+
     func viewWillAppearWasCalled() {
         callCharacterAPI()
     }
 
     func getPeopleCount() -> Int {
-        return rmCharacter.count
+        return isFiltering ? filteredRMCharacter.count : rmCharacter.count
     }
 
     func rmCharacterAtIndex(index: Int) -> PeopleAPIProtocol {
-        return rmCharacter[index]
+        return isFiltering ? filteredRMCharacter[index] : rmCharacter[index]
     }
 
     func checkNextCallIsNeeded() -> Bool {

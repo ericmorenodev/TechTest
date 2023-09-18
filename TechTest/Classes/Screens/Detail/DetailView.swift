@@ -58,7 +58,7 @@ struct DetailView: View {
     }
 
     private func loadImage() {
-        // Intenta cargar la imagen desde la caché primero
+        // Try first to find the image in cache
         if let cachedImage = presenter.storageManager.getCharacterImage(characterId: presenter.RMCharacter.characterId) {
             uiImage = cachedImage
         } else {
@@ -71,7 +71,7 @@ struct DetailView: View {
                     DispatchQueue.main.async {
                         self.uiImage = uiImage
 
-                        // Guardar la imagen en caché
+                        // Save the image in the cache
                         presenter.storageManager.saveCharacterImage(image: uiImage, characterId: presenter.RMCharacter.characterId)
                     }
                 }
