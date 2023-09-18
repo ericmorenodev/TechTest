@@ -19,7 +19,7 @@ struct PeopleAPI: PeopleAPIProtocol, Codable {
     var gender: Gender
     var origin: Origin { castOrigin }
     var location: LocationOfCharacter { castLocation }
-    var image: String
+    var image: String?
     var episodes: Array<URL>
     var characterURL: URL
     var created: String

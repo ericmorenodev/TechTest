@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 class HomeCustomCellView: UITableViewCell {
+    @IBOutlet weak var peopleImage: UIImageView!
     @IBOutlet var lblName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

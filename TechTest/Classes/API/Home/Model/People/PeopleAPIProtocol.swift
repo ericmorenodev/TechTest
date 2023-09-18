@@ -16,7 +16,7 @@ protocol PeopleAPIProtocol {
     var gender: Gender { get }
     var origin: Origin { get }
     var location: LocationOfCharacter { get }
-    var image: String { get }
+    var image: String? { get }
     var episodes: [URL] { get }
     var characterURL: URL { get }
     var created: String { get }

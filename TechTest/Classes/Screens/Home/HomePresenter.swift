@@ -52,7 +52,7 @@ internal final class HomePresenter: HomePresenterProtocol {
                     self.rmCharacter = apiResults
                     self.view?.loadPeople()
                     self.view?.showError(title: ConstantsAPI.errorTitleCheckConnection,
-                                         message: ConstantsAPI.errorTitleCheckConnection)
+                                         message: error.localizedDescription)
                 } else {
                     self.view?.showError(title: ConstantsAPI.errorGeneralNoConnection,
                                          message: ConstantsAPI.errorMessageNoCache)
