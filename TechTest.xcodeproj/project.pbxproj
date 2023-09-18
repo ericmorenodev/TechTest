@@ -39,10 +39,39 @@
 		739F506E2AB65FCC00D0D3C6 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739F506D2AB65FCC00D0D3C6 /* HomeView.xib */; };
 		739F50702AB663BE00D0D3C6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F506F2AB663BE00D0D3C6 /* AppCoordinator.swift */; };
 		739F50722AB663C500D0D3C6 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50712AB663C500D0D3C6 /* CoordinatorProtocol.swift */; };
+		739F50742AB70B4700D0D3C6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50732AB70B4700D0D3C6 /* DetailView.swift */; };
+		739F50822AB70DC900D0D3C6 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50812AB70DC900D0D3C6 /* TestConstants.swift */; };
+		739F50882AB70E0E00D0D3C6 /* PeopleServiceAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50792AB70CF000D0D3C6 /* PeopleServiceAPITest.swift */; };
+		739F508A2AB70E3500D0D3C6 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50892AB70E3500D0D3C6 /* APIManagerMock.swift */; };
+		739F508C2AB727A500D0D3C6 /* PeopleAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F508B2AB727A500D0D3C6 /* PeopleAPIMock.swift */; };
+		739F50912AB72B4A00D0D3C6 /* OriginMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50902AB72B4A00D0D3C6 /* OriginMock.swift */; };
+		739F50932AB72B5B00D0D3C6 /* LocationOfCharacterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50922AB72B5B00D0D3C6 /* LocationOfCharacterMock.swift */; };
+		739F50952AB72C5900D0D3C6 /* PeopleResponseAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50942AB72C5900D0D3C6 /* PeopleResponseAPIMock.swift */; };
+		739F50972AB72D6B00D0D3C6 /* RMInfoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50962AB72D6B00D0D3C6 /* RMInfoMock.swift */; };
+		739F509A2AB72FEB00D0D3C6 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50992AB72FEB00D0D3C6 /* HomeViewControllerTests.swift */; };
+		739F509C2AB72FF600D0D3C6 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F509B2AB72FF600D0D3C6 /* HomePresenterTests.swift */; };
+		739F509E2AB7301200D0D3C6 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F509D2AB7301200D0D3C6 /* HomeInteractorTests.swift */; };
+		739F50A02AB7309100D0D3C6 /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F509F2AB7309100D0D3C6 /* HomePresenterMock.swift */; };
+		739F50A22AB7309E00D0D3C6 /* HomeViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50A12AB7309E00D0D3C6 /* HomeViewControllerMock.swift */; };
+		739F50A42AB730B000D0D3C6 /* HomeDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50A32AB730B000D0D3C6 /* HomeDelegateMock.swift */; };
+		739F50A62AB730C100D0D3C6 /* HomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50A52AB730C100D0D3C6 /* HomeServiceMock.swift */; };
+		739F50A82AB730CE00D0D3C6 /* HomeInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50A72AB730CE00D0D3C6 /* HomeInteractorMock.swift */; };
+		739F50AA2AB730DE00D0D3C6 /* HomeCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50A92AB730DE00D0D3C6 /* HomeCoordinatorMock.swift */; };
+		739F50AC2AB732BD00D0D3C6 /* PeopleServiceAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F50AB2AB732BD00D0D3C6 /* PeopleServiceAPIMock.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		739F50832AB70DC900D0D3C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 739F4FF82AB10C7A00D0D3C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 739F4FFF2AB10C7A00D0D3C6;
+			remoteInfo = ZaraRickMorty;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		739F50002AB10C7A00D0D3C6 /* TechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		739F50002AB10C7A00D0D3C6 /* TechTestTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTestTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739F50032AB10C7A00D0D3C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739F50052AB10C7A00D0D3C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		739F50072AB10C7A00D0D3C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +105,37 @@
 		739F506D2AB65FCC00D0D3C6 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		739F506F2AB663BE00D0D3C6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		739F50712AB663C500D0D3C6 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		739F50732AB70B4700D0D3C6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		739F50792AB70CF000D0D3C6 /* PeopleServiceAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleServiceAPITest.swift; sourceTree = "<group>"; };
+		739F507F2AB70DC900D0D3C6 /* TechTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		739F50812AB70DC900D0D3C6 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		739F50892AB70E3500D0D3C6 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		739F508B2AB727A500D0D3C6 /* PeopleAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIMock.swift; sourceTree = "<group>"; };
+		739F50902AB72B4A00D0D3C6 /* OriginMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginMock.swift; sourceTree = "<group>"; };
+		739F50922AB72B5B00D0D3C6 /* LocationOfCharacterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationOfCharacterMock.swift; sourceTree = "<group>"; };
+		739F50942AB72C5900D0D3C6 /* PeopleResponseAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponseAPIMock.swift; sourceTree = "<group>"; };
+		739F50962AB72D6B00D0D3C6 /* RMInfoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMInfoMock.swift; sourceTree = "<group>"; };
+		739F50992AB72FEB00D0D3C6 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		739F509B2AB72FF600D0D3C6 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		739F509D2AB7301200D0D3C6 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		739F509F2AB7309100D0D3C6 /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
+		739F50A12AB7309E00D0D3C6 /* HomeViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerMock.swift; sourceTree = "<group>"; };
+		739F50A32AB730B000D0D3C6 /* HomeDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegateMock.swift; sourceTree = "<group>"; };
+		739F50A52AB730C100D0D3C6 /* HomeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceMock.swift; sourceTree = "<group>"; };
+		739F50A72AB730CE00D0D3C6 /* HomeInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorMock.swift; sourceTree = "<group>"; };
+		739F50A92AB730DE00D0D3C6 /* HomeCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorMock.swift; sourceTree = "<group>"; };
+		739F50AB2AB732BD00D0D3C6 /* PeopleServiceAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleServiceAPIMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		739F4FFD2AB10C7A00D0D3C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		739F507C2AB70DC900D0D3C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				739F50022AB10C7A00D0D3C6 /* TechTest */,
+				739F50802AB70DC900D0D3C6 /* TechTestTests */,
 				739F50012AB10C7A00D0D3C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +157,8 @@
 		739F50012AB10C7A00D0D3C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				739F50002AB10C7A00D0D3C6 /* TechTest.app */,
+				739F50002AB10C7A00D0D3C6 /* TechTestTests.app */,
+				739F507F2AB70DC900D0D3C6 /* TechTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +166,9 @@
 		739F50022AB10C7A00D0D3C6 /* TechTest */ = {
 			isa = PBXGroup;
 			children = (
-				739F50112AB10C7B00D0D3C6 /* Info.plist */,
 				739F50172AB10CD100D0D3C6 /* Assets */,
 				739F50182AB10D3300D0D3C6 /* Classes */,
+				739F50112AB10C7B00D0D3C6 /* Info.plist */,
 			);
 			path = TechTest;
 			sourceTree = "<group>";
@@ -166,9 +224,9 @@
 		739F501C2AB10E6400D0D3C6 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
-				739F50452AB487BF00D0D3C6 /* CustomError */,
-				739F50612AB6530000D0D3C6 /* BaseProtocol.swift */,
 				739F50692AB65F3B00D0D3C6 /* AlertCustom.swift */,
+				739F50612AB6530000D0D3C6 /* BaseProtocol.swift */,
+				739F50452AB487BF00D0D3C6 /* CustomError */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -222,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				739F50252AB10F2900D0D3C6 /* DetailCell */,
+				739F50732AB70B4700D0D3C6 /* DetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -235,8 +294,8 @@
 				739F505B2AB6524E00D0D3C6 /* HomeInteractor.swift */,
 				739F505D2AB6525A00D0D3C6 /* HomePresenter.swift */,
 				739F50592AB6524000D0D3C6 /* HomeService.swift */,
-				739F50072AB10C7A00D0D3C6 /* HomeViewController.swift */,
 				739F506D2AB65FCC00D0D3C6 /* HomeView.xib */,
+				739F50072AB10C7A00D0D3C6 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -244,8 +303,8 @@
 		739F50242AB10F1F00D0D3C6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				739F504F2AB4B74900D0D3C6 /* HomeCustomCellView.swift */,
 				739F50552AB4BCBD00D0D3C6 /* HomeCustomCell.xib */,
+				739F504F2AB4B74900D0D3C6 /* HomeCustomCellView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -295,9 +354,9 @@
 		739F503C2AB485DE00D0D3C6 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				739F504B2AB4B3D600D0D3C6 /* PeopleData */,
 				739F502F2AB47F7100D0D3C6 /* PeopleAPI.swift */,
 				739F502D2AB47F0F00D0D3C6 /* PeopleAPIProtocol.swift */,
+				739F504B2AB4B3D600D0D3C6 /* PeopleData */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -320,37 +379,86 @@
 			path = CustomError;
 			sourceTree = "<group>";
 		};
-		739F50482AB4B2E500D0D3C6 /* OriginAPI */ = {
-			isa = PBXGroup;
-			children = (
-				739F50492AB4B30100D0D3C6 /* OriginAPI.swift */,
-			);
-			path = OriginAPI;
-			sourceTree = "<group>";
-		};
 		739F504B2AB4B3D600D0D3C6 /* PeopleData */ = {
 			isa = PBXGroup;
 			children = (
-				739F504C2AB4B3E400D0D3C6 /* LocationOfCharacterAPI */,
-				739F50482AB4B2E500D0D3C6 /* OriginAPI */,
+				739F504D2AB4B42C00D0D3C6 /* LocationOfCharacterAPI.swift */,
+				739F50492AB4B30100D0D3C6 /* OriginAPI.swift */,
 			);
 			path = PeopleData;
 			sourceTree = "<group>";
 		};
-		739F504C2AB4B3E400D0D3C6 /* LocationOfCharacterAPI */ = {
+		739F50762AB70CC200D0D3C6 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				739F504D2AB4B42C00D0D3C6 /* LocationOfCharacterAPI.swift */,
+				739F508E2AB72B3400D0D3C6 /* Mocks */,
+				739F50792AB70CF000D0D3C6 /* PeopleServiceAPITest.swift */,
+				739F50892AB70E3500D0D3C6 /* APIManagerMock.swift */,
 			);
-			path = LocationOfCharacterAPI;
+			path = API;
+			sourceTree = "<group>";
+		};
+		739F50772AB70CC800D0D3C6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		739F50782AB70CCF00D0D3C6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				739F50992AB72FEB00D0D3C6 /* HomeViewControllerTests.swift */,
+				739F509B2AB72FF600D0D3C6 /* HomePresenterTests.swift */,
+				739F509D2AB7301200D0D3C6 /* HomeInteractorTests.swift */,
+				739F50982AB72FD200D0D3C6 /* Mocks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		739F50802AB70DC900D0D3C6 /* TechTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				739F50812AB70DC900D0D3C6 /* TestConstants.swift */,
+				739F50762AB70CC200D0D3C6 /* API */,
+				739F50772AB70CC800D0D3C6 /* Detail */,
+				739F50782AB70CCF00D0D3C6 /* Home */,
+			);
+			path = TechTestTests;
+			sourceTree = "<group>";
+		};
+		739F508E2AB72B3400D0D3C6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				739F508B2AB727A500D0D3C6 /* PeopleAPIMock.swift */,
+				739F50902AB72B4A00D0D3C6 /* OriginMock.swift */,
+				739F50922AB72B5B00D0D3C6 /* LocationOfCharacterMock.swift */,
+				739F50942AB72C5900D0D3C6 /* PeopleResponseAPIMock.swift */,
+				739F50962AB72D6B00D0D3C6 /* RMInfoMock.swift */,
+				739F50AB2AB732BD00D0D3C6 /* PeopleServiceAPIMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		739F50982AB72FD200D0D3C6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				739F509F2AB7309100D0D3C6 /* HomePresenterMock.swift */,
+				739F50A12AB7309E00D0D3C6 /* HomeViewControllerMock.swift */,
+				739F50A32AB730B000D0D3C6 /* HomeDelegateMock.swift */,
+				739F50A52AB730C100D0D3C6 /* HomeServiceMock.swift */,
+				739F50A72AB730CE00D0D3C6 /* HomeInteractorMock.swift */,
+				739F50A92AB730DE00D0D3C6 /* HomeCoordinatorMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		739F4FFF2AB10C7A00D0D3C6 /* TechTest */ = {
+		739F4FFF2AB10C7A00D0D3C6 /* TechTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 739F50142AB10C7B00D0D3C6 /* Build configuration list for PBXNativeTarget "TechTest" */;
+			buildConfigurationList = 739F50142AB10C7B00D0D3C6 /* Build configuration list for PBXNativeTarget "TechTestTests" */;
 			buildPhases = (
 				739F4FFC2AB10C7A00D0D3C6 /* Sources */,
 				739F4FFD2AB10C7A00D0D3C6 /* Frameworks */,
@@ -360,10 +468,28 @@
 			);
 			dependencies = (
 			);
-			name = TechTest;
+			name = TechTestTests;
 			productName = ZaraRickMorty;
-			productReference = 739F50002AB10C7A00D0D3C6 /* TechTest.app */;
+			productReference = 739F50002AB10C7A00D0D3C6 /* TechTestTests.app */;
 			productType = "com.apple.product-type.application";
+		};
+		739F507E2AB70DC900D0D3C6 /* TechTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 739F50852AB70DC900D0D3C6 /* Build configuration list for PBXNativeTarget "TechTest" */;
+			buildPhases = (
+				739F507B2AB70DC900D0D3C6 /* Sources */,
+				739F507C2AB70DC900D0D3C6 /* Frameworks */,
+				739F507D2AB70DC900D0D3C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				739F50842AB70DC900D0D3C6 /* PBXTargetDependency */,
+			);
+			name = TechTest;
+			productName = ZaraRickMortyTests;
+			productReference = 739F507F2AB70DC900D0D3C6 /* TechTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -377,6 +503,10 @@
 				TargetAttributes = {
 					739F4FFF2AB10C7A00D0D3C6 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					739F507E2AB70DC900D0D3C6 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 739F4FFF2AB10C7A00D0D3C6;
 					};
 				};
 			};
@@ -393,7 +523,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				739F4FFF2AB10C7A00D0D3C6 /* TechTest */,
+				739F4FFF2AB10C7A00D0D3C6 /* TechTestTests */,
+				739F507E2AB70DC900D0D3C6 /* TechTest */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +538,13 @@
 				739F500D2AB10C7B00D0D3C6 /* Assets.xcassets in Resources */,
 				739F50562AB4BCBD00D0D3C6 /* HomeCustomCell.xib in Resources */,
 				739F506E2AB65FCC00D0D3C6 /* HomeView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		739F507D2AB70DC900D0D3C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +570,7 @@
 				739F504A2AB4B30100D0D3C6 /* OriginAPI.swift in Sources */,
 				739F50392AB4821F00D0D3C6 /* PeopleResponseAPI.swift in Sources */,
 				739F502C2AB1130600D0D3C6 /* StorageManager.swift in Sources */,
+				739F50742AB70B4700D0D3C6 /* DetailView.swift in Sources */,
 				739F503B2AB485BD00D0D3C6 /* RMInfoAPI.swift in Sources */,
 				739F503F2AB4860300D0D3C6 /* RMInfoAPIProtocol.swift in Sources */,
 				739F50582AB6523100D0D3C6 /* HomeContract.swift in Sources */,
@@ -448,7 +587,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		739F507B2AB70DC900D0D3C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739F50972AB72D6B00D0D3C6 /* RMInfoMock.swift in Sources */,
+				739F50A82AB730CE00D0D3C6 /* HomeInteractorMock.swift in Sources */,
+				739F509A2AB72FEB00D0D3C6 /* HomeViewControllerTests.swift in Sources */,
+				739F508A2AB70E3500D0D3C6 /* APIManagerMock.swift in Sources */,
+				739F509C2AB72FF600D0D3C6 /* HomePresenterTests.swift in Sources */,
+				739F50952AB72C5900D0D3C6 /* PeopleResponseAPIMock.swift in Sources */,
+				739F50932AB72B5B00D0D3C6 /* LocationOfCharacterMock.swift in Sources */,
+				739F50A22AB7309E00D0D3C6 /* HomeViewControllerMock.swift in Sources */,
+				739F50A62AB730C100D0D3C6 /* HomeServiceMock.swift in Sources */,
+				739F50822AB70DC900D0D3C6 /* TestConstants.swift in Sources */,
+				739F50882AB70E0E00D0D3C6 /* PeopleServiceAPITest.swift in Sources */,
+				739F50AA2AB730DE00D0D3C6 /* HomeCoordinatorMock.swift in Sources */,
+				739F50A42AB730B000D0D3C6 /* HomeDelegateMock.swift in Sources */,
+				739F50AC2AB732BD00D0D3C6 /* PeopleServiceAPIMock.swift in Sources */,
+				739F50912AB72B4A00D0D3C6 /* OriginMock.swift in Sources */,
+				739F50A02AB7309100D0D3C6 /* HomePresenterMock.swift in Sources */,
+				739F508C2AB727A500D0D3C6 /* PeopleAPIMock.swift in Sources */,
+				739F509E2AB7301200D0D3C6 /* HomeInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		739F50842AB70DC900D0D3C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 739F4FFF2AB10C7A00D0D3C6 /* TechTestTests */;
+			targetProxy = 739F50832AB70DC900D0D3C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		739F500E2AB10C7B00D0D3C6 /* LaunchScreen.storyboard */ = {
@@ -628,6 +800,40 @@
 			};
 			name = Release;
 		};
+		739F50862AB70DC900D0D3C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericmorenodev.TechTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TechTest";
+			};
+			name = Debug;
+		};
+		739F50872AB70DC900D0D3C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericmorenodev.TechTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TechTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TechTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,11 +846,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		739F50142AB10C7B00D0D3C6 /* Build configuration list for PBXNativeTarget "TechTest" */ = {
+		739F50142AB10C7B00D0D3C6 /* Build configuration list for PBXNativeTarget "TechTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				739F50152AB10C7B00D0D3C6 /* Debug */,
 				739F50162AB10C7B00D0D3C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		739F50852AB70DC900D0D3C6 /* Build configuration list for PBXNativeTarget "TechTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739F50862AB70DC900D0D3C6 /* Debug */,
+				739F50872AB70DC900D0D3C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
