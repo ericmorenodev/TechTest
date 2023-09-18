@@ -58,17 +58,25 @@ struct DetailView: View {
     }
 
     private func loadImage() {
-        guard let imageUrl = presenter.RMCharacter.image, let url = URL(string: imageUrl) else {
-            return
-        }
-
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            if let data = data, let uiImage = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.uiImage = uiImage
-                }
+        // Intenta cargar la imagen desde la caché primero
+        if let cachedImage = presenter.storageManager.getCharacterImage(characterId: presenter.RMCharacter.characterId) {
+            uiImage = cachedImage
+        } else {
+            guard let imageUrl = presenter.RMCharacter.image, let url = URL(string: imageUrl) else {
+                return
             }
-        }.resume()
+
+            URLSession.shared.dataTask(with: url) { data, _, _ in
+                if let data = data, let uiImage = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.uiImage = uiImage
+
+                        // Guardar la imagen en caché
+                        presenter.storageManager.saveCharacterImage(image: uiImage, characterId: presenter.RMCharacter.characterId)
+                    }
+                }
+            }.resume()
+        }
     }
 }
 
@@ -89,7 +97,11 @@ struct DetailView_Previews: PreviewProvider {
             created: "2023-09-17T12:34:56.789Z"
         )
 
-        let presenter = DetailPresenter(interactor: DetailInteractor(rmCharacter: rmCharacter))
+        let storageManager = StorageManager.shared
+
+        let interactor = DetailInteractor(rmCharacter: rmCharacter)
+        let presenter = DetailPresenter(interactor: interactor, storageManager: storageManager)
+
         return DetailView(presenter: presenter)
     }
 }

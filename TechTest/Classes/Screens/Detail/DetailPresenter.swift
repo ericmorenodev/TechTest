@@ -12,9 +12,11 @@ class DetailPresenter: ObservableObject {
 
     var view: DetailView?
     var interactor: DetailInteractorProtocol
+    var storageManager: StorageManager
 
-    init(interactor: DetailInteractorProtocol) {
+    init(interactor: DetailInteractorProtocol, storageManager: StorageManager) {
         self.interactor = interactor
+        self.storageManager = storageManager
         RMCharacter = interactor.getCharacter()
     }
 }

@@ -64,7 +64,7 @@ internal final class HomePresenter: HomePresenterProtocol {
 
     func downloadCharacterImageHome(_ rmCharacterAtIndex: PeopleAPIProtocol, _ cell: HomeCustomCellView) {
         // Try first to find the image in the cache
-        if let cachedImage = storageManager.getCharacterImage(name: rmCharacterAtIndex.name) {
+        if let cachedImage = storageManager.getCharacterImage(characterId: rmCharacterAtIndex.characterId) {
             cell.peopleImage.image = cachedImage
         } else {
             if let imageUrlString = rmCharacterAtIndex.image, let imageUrl = URL(string: imageUrlString) {
@@ -74,7 +74,7 @@ internal final class HomePresenter: HomePresenterProtocol {
                             cell.peopleImage.image = image
 
                             // save the image in the cache
-                            self.storageManager.saveCharacterImage(image: image, name: rmCharacterAtIndex.name)
+                            self.storageManager.saveCharacterImage(image: image, characterId: rmCharacterAtIndex.characterId)
                         }
                     } else {
                         DispatchQueue.main.async {
