@@ -27,12 +27,15 @@ class HomeCustomCellView: UITableViewCell {
     func setupUI() {
         // Cell style
         contentView.layer.cornerRadius = 10
-        contentView.layer.borderWidth = 1.0
+        contentView.layer.borderWidth = 0.8
         contentView.layer.borderColor = UIColor.lightGray.cgColor
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        contentView.layer.shadowOpacity = 0.2
+        contentView.layer.shadowRadius = 4.0
         contentView.clipsToBounds = true
 
         // Photo style
-        peopleImage.layer.cornerRadius = peopleImage.frame.size.width / 2
+        peopleImage.layer.cornerRadius = peopleImage.frame.size.width / 2.8
         peopleImage.contentMode = .scaleAspectFill
 
         // Name style

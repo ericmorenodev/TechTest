@@ -29,26 +29,67 @@ struct DetailView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
 
-            Text("Status: \(presenter.RMCharacter.status.rawValue)")
-                .font(.headline)
+            HStack {
+                Text("Status:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.status.rawValue)
+                    .font(.headline)
+                    .fontWeight(.light)
+            }
 
-            Text("Species: \(presenter.RMCharacter.species)")
-                .font(.headline)
+            HStack {
+                Text("Species:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.species)
+                    .font(.headline)
+                    .fontWeight(.light)
+            }
 
-            Text("Type: \(presenter.RMCharacter.type)")
-                .font(.headline)
+            HStack {
+                Text("Type:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.type)
+                    .font(.headline)
+                    .fontWeight(.light)
+            }
 
-            Text("Gender: \(presenter.RMCharacter.gender.rawValue)")
-                .font(.headline)
+            HStack {
+                Text("Gender:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.gender.rawValue)
+                    .font(.headline)
+                    .fontWeight(.light)
+            }
 
-            Text("Origin: \(presenter.RMCharacter.origin.name)")
-                .font(.headline)
+            HStack {
+                Text("Origin:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.origin.name)
+                    .font(.headline)
+                    .fontWeight(.light)
+            }
 
-            Text("Location: \(presenter.RMCharacter.location.name)")
-                .font(.headline)
+            HStack {
+                Text("Location:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.location.name)
+                    .font(.headline).fontWeight(.light)
+            }
 
-            Text("Created: \(presenter.RMCharacter.created)")
-                .font(.headline)
+            HStack {
+                Text("Created:")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Text(presenter.RMCharacter.created)
+                    .font(.headline)
+                    .fontWeight(.light)
+            }
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)

@@ -22,16 +22,16 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="tN3-ac-6mk">
-                    <rect key="frame" x="0.0" y="150" width="393" height="661"/>
+                    <rect key="frame" x="16" y="150" width="361" height="661"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="OUg-Mv-Klz">
                     <rect key="frame" x="16" y="150" width="361" height="661"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    <color key="backgroundColor" systemColor="placeholderTextColor"/>
                 </activityIndicatorView>
                 <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-Fi-kPg">
-                    <rect key="frame" x="0.0" y="94" width="393" height="56"/>
+                    <rect key="frame" x="16" y="94" width="361" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="jFP-d2-rdD"/>
@@ -49,8 +49,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
