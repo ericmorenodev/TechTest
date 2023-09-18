@@ -63,21 +63,29 @@ internal final class HomePresenter: HomePresenterProtocol {
     }
 
     func downloadCharacterImageHome(_ rmCharacterAtIndex: PeopleAPIProtocol, _ cell: HomeCustomCellView) {
-        if let imageUrlString = rmCharacterAtIndex.image, let imageUrl = URL(string: imageUrlString) {
-            let task = URLSession.shared.dataTask(with: imageUrl) { data, _, error in
-                if error == nil, let data = data, let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        cell.peopleImage.image = image
+        // Try first to find the image in the cache
+        if let cachedImage = storageManager.getCharacterImage(name: rmCharacterAtIndex.name) {
+            cell.peopleImage.image = cachedImage
+        } else {
+            if let imageUrlString = rmCharacterAtIndex.image, let imageUrl = URL(string: imageUrlString) {
+                let task = URLSession.shared.dataTask(with: imageUrl) { data, _, error in
+                    if error == nil, let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            cell.peopleImage.image = image
+
+                            // save the image in the cache
+                            self.storageManager.saveCharacterImage(image: image, name: rmCharacterAtIndex.name)
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            cell.peopleImage.image = UIImage(systemName: "person.circle")?.withTintColor(.gray)
+                        }
+                        print("Error Downloading Image: \(error?.localizedDescription ?? "")")
+                        self.view?.loadingView(.hide)
                     }
-                } else {
-                    DispatchQueue.main.async {
-                        cell.peopleImage.image = UIImage(systemName: "person.circle")?.withTintColor(.gray)
-                    }
-                    print("Error Downloading Image: \(error?.localizedDescription ?? "")")
-                    self.view?.loadingView(.hide)
                 }
+                task.resume()
             }
-            task.resume()
         }
     }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol StorageManagerProtocol {
     func saveObject<T: Encodable>(object: T, filename: String) throws
@@ -13,6 +14,9 @@ protocol StorageManagerProtocol {
 
     func getPeople() -> [PeopleAPIProtocol]?
     func savePeople(people: [PeopleAPIProtocol])
+
+    func getCharacterImage(name: String) -> UIImage?
+    func saveCharacterImage(image: UIImage, name: String)
 }
 
 struct StorageManager: StorageManagerProtocol {
@@ -59,6 +63,25 @@ struct StorageManager: StorageManagerProtocol {
         }
 
         try? saveObject(object: peopleObj, filename: "peopleCache.json")
+    }
+
+    func getCharacterImage(name: String) -> UIImage? {
+        do {
+            let imageData: Data = try getObject(filename: "\(name)ImageCache.jpg")
+            return UIImage(data: imageData)
+        } catch {
+            return nil
+        }
+    }
+
+    func saveCharacterImage(image: UIImage, name: String) {
+        if let imageData = image.jpegData(compressionQuality: 1.0) {
+            do {
+                try saveObject(object: imageData, filename: "\(name)ImageCache.jpg")
+            } catch let saveError {
+                print("Error saving character image to cache: \(saveError.localizedDescription)")
+            }
+        }
     }
 
     // MARK: Path Function

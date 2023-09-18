@@ -285,7 +285,6 @@
 		739F50222AB10EF000D0D3C6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				739F50252AB10F2900D0D3C6 /* DetailCell */,
 				739F50732AB70B4700D0D3C6 /* DetailView.swift */,
 				739F50AD2AB73CCB00D0D3C6 /* DetailInteractor.swift */,
 				739F50AF2AB73CD300D0D3C6 /* DetailPresenter.swift */,
@@ -316,13 +315,6 @@
 				739F504F2AB4B74900D0D3C6 /* HomeCustomCellView.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		739F50252AB10F2900D0D3C6 /* DetailCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DetailCell;
 			sourceTree = "<group>";
 		};
 		739F50262AB10FC300D0D3C6 /* Domain */ = {
