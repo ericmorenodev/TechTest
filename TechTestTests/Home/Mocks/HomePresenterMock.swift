@@ -9,6 +9,7 @@ import Foundation
 @testable import TechTest
 
 class HomePresenterMock: HomePresenterProtocol {
+    var rmCharacter: [TechTest.PeopleAPIProtocol] = []
     var view: TechTest.HomeViewProtocol?
 
     var funcViewDidLoadWasCalledCalled = false
@@ -17,6 +18,7 @@ class HomePresenterMock: HomePresenterProtocol {
     var callCharacterAPIWasCalled = false
     var downloadCharacterImageHomeWasCalled = false
     var funcGetPeopleCountWasCalled = false
+    var funcFilterRMCharacterWasCalled = false
 
     func viewDidLoadWasCalled() {
         funcViewDidLoadWasCalledCalled = true
@@ -28,6 +30,10 @@ class HomePresenterMock: HomePresenterProtocol {
 
     func checkNextCallIsNeeded() -> Bool {
         return TestConstants.testBool
+    }
+
+    func filterRMCharacter(with searchText: String) {
+        funcFilterRMCharacterWasCalled = true
     }
 
     func getPeopleCount() -> Int {

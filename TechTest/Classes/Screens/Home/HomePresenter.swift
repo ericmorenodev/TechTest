@@ -42,7 +42,7 @@ internal final class HomePresenter: HomePresenterProtocol {
                 let peopleFromCall = peopleRetrieved.results
                 self.rmCharacter.append(contentsOf: peopleFromCall)
                 self.storageManager.savePeople(people: self.rmCharacter)
-                self.view?.loadPeople()
+                self.view?.reloadPeople()
                 self.view?.loadingView(.hide)
                 if let nextUrl = peopleRetrieved.info.next {
                     self.urlToChange = nextUrl
@@ -54,7 +54,7 @@ internal final class HomePresenter: HomePresenterProtocol {
                 if let apiResults = self.storageManager.getPeople() {
                     self.next = false
                     self.rmCharacter = apiResults
-                    self.view?.loadPeople()
+                    self.view?.reloadPeople()
                     self.view?.showError(title: ConstantsAPI.errorTitleCheckConnection,
                                          message: error.localizedDescription)
                 } else {
@@ -83,6 +83,7 @@ internal final class HomePresenter: HomePresenterProtocol {
                         DispatchQueue.main.async {
                             cell.peopleImage.image = UIImage(systemName: "person.circle")?.withTintColor(.gray)
                         }
+                        // error via console, this error can be anoying and does not have a visual purpose.
                         print("Error Downloading Image: \(error?.localizedDescription ?? "")")
                         self.view?.loadingView(.hide)
                     }
@@ -101,7 +102,7 @@ internal final class HomePresenter: HomePresenterProtocol {
             }
         }
 
-        view?.loadPeople()
+        view?.reloadPeople()
     }
 
     func viewWillAppearWasCalled() {

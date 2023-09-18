@@ -13,7 +13,7 @@ class HomeViewMock: HomeViewProtocol {
     var funcloadingViewCalled = false
     var funcShowErrorWasCalled = false
 
-    func loadPeople() {
+    func reloadPeople() {
         funcLoadPeople = true
     }
 

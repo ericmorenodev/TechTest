@@ -50,8 +50,8 @@ struct StorageManager: StorageManagerProtocol {
         do {
             let people: [PeopleAPI] = try getObject(filename: "peopleCache.json")
             return people
-        } catch let err { // esto visual si quieres
-            print(err.localizedDescription)
+        } catch let error {
+            print("Error retrieving data from cache: \(error.localizedDescription)")
         }
 
         return nil
@@ -61,15 +61,19 @@ struct StorageManager: StorageManagerProtocol {
         guard let peopleObj = people as? [PeopleAPI] else {
             return
         }
-
-        try? saveObject(object: peopleObj, filename: "peopleCache.json")
+        do {
+            try saveObject(object: peopleObj, filename: "peopleCache.json")
+        } catch let saveError {
+            print("Error saving character to cache: \(saveError.localizedDescription)")
+        }
     }
 
     func getCharacterImage(characterId: Int) -> UIImage? {
         do {
             let imageData: Data = try getObject(filename: "\(characterId)ImageCache.jpg")
             return UIImage(data: imageData)
-        } catch {
+        } catch let getError {
+            print("Error retrieving character image from cache: \(getError.localizedDescription)")
             return nil
         }
     }

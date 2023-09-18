@@ -76,6 +76,14 @@ final class HomeViewControllerTests: XCTestCase {
         XCTAssertTrue(delegateMock.goToDeatailScreenCalled)
     }
 
+    func testSearchBar() {
+        _ = sut.view
+        let searchBar = sut.searchBar
+        searchBar?.delegate?.searchBar?(searchBar!, textDidChange: "Rick")
+
+        XCTAssertTrue(presenterMock.funcFilterRMCharacterWasCalled)
+    }
+
     func testWillDisplay() {
         _ = sut.view
         let tableView = sut.tableViewPeople

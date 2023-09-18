@@ -13,24 +13,13 @@ struct ConstantsAPI {
     static let apiLocations = "https://rickandmortyapi.com/api/location"
     static let apiEpisodes = "https://rickandmortyapi.com/api/episode"
 
-    static let locationTitle = "Location"
-    static let characterTitle = "Characters"
-    static let episodesTitle = "Episodes"
-
-    enum TabName: String {
-        case characters
-        case locations
-        case episodes
-    }
-
-    static let imageLocation = UIImage(systemName: "location")
-    static let imageCharacter = UIImage(systemName: "character")
-    static let imageEpisodes = UIImage(systemName: "book")
-
     // MARK: Strings
 
+    static let errorTitle = "Error"
     static let errorTitleCheckConnection = "Something is wrong, check your connection."
     static let errorMessageUsingCache = "Using Cache."
     static let errorMessageNoCache = "Sadly no cache stored. Nothing to show"
     static let errorGeneralNoConnection = "Something is wrong with the internet. Check your connection"
+    static let errorLoadingCharacter = "Error loading selected Character"
+
 }

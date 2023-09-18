@@ -12,7 +12,6 @@ class AppCoordinator: CoordinatorProtocol {
     var childCoordinators: [CoordinatorProtocol] = []
     var window: UIWindow
 
-    // we only need to call this var once so lazy
     lazy var navigationController: UINavigationController = {
         getNavigation()
 
@@ -24,7 +23,6 @@ class AppCoordinator: CoordinatorProtocol {
         return navigator
     }
 
-    // need to initialize window
     init(window: UIWindow) {
         self.window = window
         self.window.rootViewController = navigationController

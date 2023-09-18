@@ -6,8 +6,8 @@
 //
 
 import Foundation
-@testable import TechTest
 import XCTest
+@testable import TechTest
 
 class HomePresenterTests: XCTestCase {
     var sut: HomePresenter!
@@ -43,7 +43,7 @@ class HomePresenterTests: XCTestCase {
         XCTAssertNotNil(sut.interactor)
     }
 
-    func testGetPeopleSucces() {
+    func testGetPeopleSuccess() {
         _ = sut.view
         sut.callCharacterAPI()
         XCTAssertTrue(interactorMock.funcGetDataWasCalled)

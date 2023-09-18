@@ -49,6 +49,8 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // In order to avoid overloading API calls, I have limited the number of visible cells on the screen.
+        // This compromises filtering, as you need to physically scroll all the way down for it to work with the entire list. However, I wanted to demonstrate my ability to handle this as well.
         guard let numrowToMakeNewApiCall = presenter?.getPeopleCount() else { return }
         if presenter?.checkNextCallIsNeeded() == true {
             if indexPath.row == (numrowToMakeNewApiCall - 5) {
@@ -72,7 +74,7 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let rmCharacterAtIndex = presenter?.rmCharacterAtIndex(index: indexPath.row) else {
-            // Alert view mostrando error
+            showError(title: ConstantsAPI.errorTitle, message: ConstantsAPI.errorLoadingCharacter)
             return
         }
 
@@ -85,7 +87,7 @@ internal class HomeViewController: UIViewController, UITableViewDelegate, UITabl
 }
 
 extension HomeViewController: HomeViewProtocol {
-    func loadPeople() {
+    func reloadPeople() {
         DispatchQueue.main.async {
             self.tableViewPeople.reloadData()
         }

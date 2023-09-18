@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeViewProtocol: BaseProtocol {
-    func loadPeople()
+    func reloadPeople()
     func loadingView(_ state: LoadingState)
 }
 
